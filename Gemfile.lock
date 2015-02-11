@@ -16,6 +16,7 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.1)
     ruby-prof (0.15.3)
+    thor (0.19.1)
 
 PLATFORMS
   ruby
@@ -23,3 +24,4 @@ PLATFORMS
 DEPENDENCIES
   rspec
   ruby-prof
+  thor
