@@ -16,3 +16,5 @@ run.sh
 .rvmrc
 .ruby-*
 public/sitemaps/*
+
+vendor/ruby
