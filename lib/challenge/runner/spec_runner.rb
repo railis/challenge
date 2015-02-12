@@ -3,6 +3,7 @@ require 'rspec'
 module Challenge
   class SpecRunner < Runner
     def perform!
+      check
       Logging.info "Running specs for '#{puzzle}' solution"
       configure
       suite_path = File.expand_path("../../test_suite.rb", __FILE__)
