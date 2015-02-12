@@ -1,4 +1,3 @@
-require 'pry'
 module Challenge
   class Measurement
     attr_reader :solution_class
@@ -18,7 +17,11 @@ module Challenge
       puts "Running before"
       run_before!
       puts "Running action"
-      run_action!
+      profiler = Profiler.new do
+        run_action!
+      end
+      profiler.run!
+      puts "Result is: #{profiler.result}"
     end
 
     private

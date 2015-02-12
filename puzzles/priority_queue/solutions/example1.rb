@@ -5,14 +5,12 @@ class Example1
     @min = nil
   end
   def push(object, key)
-    puts "push 1"
     raise "Object exists" if @container.find { |x| x.first == object }
     @container << [object, key]
     @min = nil
   end
   
   def min
-    puts "min 1"
     unless @min
       result = @container.min { |a,b| a.last <=> b.last }
       @min = result && result.first
@@ -21,7 +19,6 @@ class Example1
   end
   
   def pop
-    puts "pop 1"
     found = @container.min { |a,b| a.last <=> b.last }
     return nil unless found
     deleted = @container.delete(found)
@@ -30,7 +27,6 @@ class Example1
   end
   
   def decrease_key(object, key)
-    puts "decrease key 1"
     found = @container.find { |x| x.first == object }
     raise "Tried to increase" if found[1] < key
     if found
