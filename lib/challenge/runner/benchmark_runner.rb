@@ -1,12 +1,7 @@
 module Challenge
-  class BenchmarkRunner
-    attr_reader :puzzle
-
-    def initialize(puzzle)
-      @puzzle = puzzle
-    end
-
+  class BenchmarkRunner < Runner
     def perform!
+      check
       Measurement.prepare(puzzle)
       results = Results.new
       solutions = Solution.get_all(puzzle)
@@ -18,6 +13,21 @@ module Challenge
         results.push(solution, measurement.result_in_seconds)
       end
       results.print
+    end
+
+    def check
+      super
+      check_benchmark
+    end
+
+    private
+
+    def check_benchmark
+      path = File.expand_path("../../../../puzzles/#{puzzle}/benchmark.rb", __FILE__)
+      puts path
+      unless File.exists?(path)
+        raise "Counldn't find benchmark for '#{puzzle}' puzzle"
+      end
     end
   end
 end
