@@ -4,7 +4,7 @@ Simple tool to measure and compare puzzle solutions based on specs and performan
 
 === Installation
 
-  git clone GITHUB_ADDRESS
+  git clone https://github.com/railis/challenge.git
   cd challenge
 
 === Usage
