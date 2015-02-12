@@ -19,7 +19,7 @@ module Challenge
       @data.sort do |el1, el2|
         el1.last <=> el2.last
       end.each_with_index do |el, idx|
-        txt << "#{idx+1}. #{el.first.name.colorize(:green)}".ljust(40) + "#{el.last.to_s.ljust(9)}s\n".bold
+        txt << "#{idx+1}. #{el.first.name.colorize(:green)}".ljust(40) + "#{el.last.to_s.ljust(8, "0")} s\n".bold
       end
       txt
     end
