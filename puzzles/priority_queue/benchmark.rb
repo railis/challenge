@@ -1,4 +1,8 @@
 Challenge::Benchmark.new do
+  iterations 4
+
+  time_limit 3000
+
   before do
     @queue = solution_class.new
     @count = 1000

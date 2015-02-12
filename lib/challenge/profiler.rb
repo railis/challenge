@@ -2,7 +2,6 @@ require 'benchmark'
 
 module Challenge
   class Profiler
-    ITERATIONS = 5
     attr_reader :block, :result
 
     def initialize(&block)
@@ -11,7 +10,7 @@ module Challenge
 
     def run!
       results_arr = []
-      ITERATIONS.times do
+      Benchmark.iterations.times do
         partial_result = ::Benchmark.measure do
           block.call
         end.real

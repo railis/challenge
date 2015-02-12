@@ -15,7 +15,7 @@ module Challenge
     end
 
     def pretty_results
-      txt = "\nSorted results (average after 5 iterations):\n".colorize(:light_blue)
+      txt = "\nSorted results (average for one iteration):\n".colorize(:light_blue)
       @data.sort do |el1, el2|
         el1.last <=> el2.last
       end.each_with_index do |el, idx|
