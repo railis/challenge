@@ -4,10 +4,6 @@ module Challenge
       def block
         @@block
       end
-
-      def examples
-        @@examples
-      end
     end
 
     def initialize(&block)
