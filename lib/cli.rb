@@ -11,6 +11,6 @@ class CLI < Thor
   desc "spec PUZZLE", "Runs specs for each solution per puzzle"
 
   def spec(puzzle)
-    puts "specing #{puzzle}"
+    Challenge::SpecRunner.new(puzzle).perform!
   end
 end

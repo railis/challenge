@@ -22,3 +22,4 @@ module Challenge
 end
 
 require_relative 'runner/benchmark_runner'
+require_relative 'runner/spec_runner'
