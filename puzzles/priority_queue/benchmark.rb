@@ -1,7 +1,7 @@
 Challenge::Benchmark.new do
-  iterations 4
+  iterations 3
 
-  time_limit 0.35
+  time_limit 1
 
   before do
     @queue = solution_class.new
