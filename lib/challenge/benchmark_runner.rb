@@ -1,5 +1,5 @@
 module Challenge
-  class Runner
+  class BenchmarkRunner
     attr_reader :puzzle
 
     def initialize(puzzle)
