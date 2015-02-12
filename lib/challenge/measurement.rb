@@ -6,22 +6,19 @@ module Challenge
       require File.expand_path("../../../puzzles/#{puzzle}/benchmark", __FILE__)
     end
 
-    attr_reader :solution_class
+    attr_reader :solution_class, :result_in_seconds
 
     def initialize(solution)
       @solution_class = solution.class
     end
 
     def run!
-      puts "Running solution: #{@solution_class}"
-      puts "Running before"
       run_before!
-      puts "Running action"
       profiler = Profiler.new do
         run_action!
       end
       profiler.run!
-      puts "Result is: #{profiler.result}"
+      @result_in_seconds = profiler.result
     end
 
     private

@@ -8,9 +8,13 @@ module Challenge
 
     def perform!
       Measurement.prepare(puzzle)
+      results = Results.new
       Solution.get_all(puzzle).each do |solution|
-        Measurement.new(solution).run!
+        measurement = Measurement.new(solution)
+        measurement.run!
+        results.push(solution, measurement.result_in_seconds)
       end
+      results.print
     end
   end
 end
