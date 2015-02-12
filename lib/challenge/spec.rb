@@ -1,9 +1,8 @@
 module Challenge
   class Spec
-    @@examples = []
     class << self
-      def before_block
-        @@before_block
+      def block
+        @@block
       end
 
       def examples
@@ -11,12 +10,8 @@ module Challenge
       end
     end
 
-    def it(label, &block)
-      @@examples << [label, block]
-    end
-
-    def before(&block)
-      @@before_block = block
+    def initialize(&block)
+      @@block = block
     end
   end
 end
