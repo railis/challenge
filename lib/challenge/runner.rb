@@ -9,7 +9,10 @@ module Challenge
     def perform!
       Measurement.prepare(puzzle)
       results = Results.new
-      Solution.get_all(puzzle).each do |solution|
+      solutions = Solution.get_all(puzzle)
+      Logging.info "Running #{solutions.size} solutions for '#{puzzle}' ..."
+      solutions.each do |solution|
+        Logging.solution_name solution.name.downcase
         measurement = Measurement.new(solution)
         measurement.run!
         results.push(solution, measurement.result_in_seconds)
