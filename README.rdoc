@@ -1,0 +1,18 @@
+== Challenge
+
+Simple tool to measure and compare puzzle solutions based on specs and performance.
+
+=== Installation
+
+  git clone GITHUB_ADDRESS
+  cd challenge
+
+=== Usage
+
+  ./bin/cl spec PUZZLE_NAME
+
+Runs spec described for given solution
+
+  ./bin/cl benchmark PUZZLE_NAME
+
+Runs benchmark and draws results based on performance
