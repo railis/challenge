@@ -1,4 +1,4 @@
-class Example2
+class Dominik
 
   def best_path(string)
     @arr = string.split.map! {|e| e.to_i}
@@ -33,10 +33,6 @@ class Example2
 
     # max from all integers in last triangle row
     @sum[(index - level + 1)..index].max
-  end
-
-  def maxx(arr)
-    arr.inject(arr.first) {|r,e| r = e if r < e; r}
   end
 
   def max(x, y)
