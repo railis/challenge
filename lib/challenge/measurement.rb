@@ -13,8 +13,8 @@ module Challenge
     end
 
     def run!
+      run_before!
       profiler = Profiler.new do
-        run_before!
         run_action!
       end
       profiler.run!
