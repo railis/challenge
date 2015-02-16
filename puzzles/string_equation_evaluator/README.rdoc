@@ -20,11 +20,11 @@ Integer evaluated from input.
 
 === Solution Format
 
-class MyClass
-  def evaluate(string)
-    # returns integer
+  class MyClass
+    def evaluate(string)
+      # returns integer
+    end
   end
-end
 
 === Additional notes
 
