@@ -1,0 +1,36 @@
+== String Equation Evaluator
+
+The puzzle is about evaluating mathematical expression from input string.
+
+=== Input
+
+String containing math expression.
+
+For simplicity:
+* An expression has two operands and one operator and is encolsed in parentheses (1 + 2)
+* Both operands may be also expressions themselves, e.g. (1 + (5 - 1))
+* Only integer numbers allowed
+* Possible attributes: (+,-)
+
+Expressions can be nested arbitrarily using parentheses.
+
+=== Output
+
+Integer evaluated from input.
+
+=== Solution Format
+
+class MyClass
+  def evaluate(string)
+    # returns integer
+  end
+end
+
+=== Additional notes
+
+* You can't use eval to simply eval the string in Ruby, e.g eval '(1+2)' is not alloved.
+* Your solution should check for bad input, eg: non integer/operator/parentheses character is not allowed.
+
+For other questions check spec.
+
+Have fun!
