@@ -3,10 +3,10 @@ Challenge::Benchmark.new do
   time_limit 600
   before do
     srand(666)
-    MAX_NUM = 1000
-    HEIGHT = 10000
-    @triangle = (1..HEIGHT).map do |level|
-      Array.new(level) { rand(MAX_NUM) }.join(" ")
+    @max_num = 1000
+    @height = 1000
+    @triangle = (1..@height).map do |level|
+      Array.new(level) { rand(@max_num) }.join(" ")
     end.join("\n")
   end
 
