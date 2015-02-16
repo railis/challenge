@@ -1,4 +1,4 @@
-class Dominik
+class Example2
 
   def best_path(string)
     @arr = string.split.map! {|e| e.to_i}
