@@ -1,3 +1,4 @@
+require "pry"
 Challenge::Spec.new do
   context "when expression is invalid" do
     context "when it includes invalid characters" do
@@ -20,7 +21,7 @@ Challenge::Spec.new do
       let(:exp) { "((1 + 2) + 1) + 4)" }
 
       it "raises error" do
-        expect { @solution_class.new(exp).calculate }.to raise_error("Unmatched '('")
+        expect { @solution_class.new(exp).calculate }.to raise_error("Unmatched ')'")
       end
     end
   end

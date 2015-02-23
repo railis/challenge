@@ -13,7 +13,10 @@ Integer evaluated from input.
 === Solution Format
 
   class MyClass
-    def evaluate(string)
+    def initialize(string)
+    end
+
+    def calculate
       # returns integer / raises error
     end
   end
